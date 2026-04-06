@@ -361,28 +361,6 @@ public class CustomSceneManager : MonoBehaviour
         groupWeight = y - x;
         interWeight = 1f - y;
         interconnWeight = 0.5f;
-        
-        // Set fixed
-        goalWeight = 0f;
-        groupWeight = 0f;
-        interWeight = 1f;
-        
-        int intR1 = UnityEngine.Random.Range(0, 1);
-        float r1 = intR1 * 0.1f;
-        int intR2 = UnityEngine.Random.Range(0, 1);
-        float r2 = intR2 * 0.1f;
-        if (r1 > r2)
-        {
-            float temp = r1;
-            r1 = r2;
-            r2 = temp;
-        }
-        int intR3 = UnityEngine.Random.Range(0, 1);
-        float r3 = intR3 * 0.1f;
-        goalWeight = r1;
-        groupWeight = r2 - r1;
-        interWeight = 1 - r2;
-        interconnWeight = r3;
     }
 
     private void Update()
